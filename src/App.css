@@ -1,0 +1,56 @@
+html, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #EFECE3; 
+  }
+
+
+.title {
+    padding-top: 15%;
+    text-align: center;
+
+}
+
+.box {
+    display: flex; 
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 5%;
+    
+    padding-bottom: 100px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+.settingItem {
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.settingEntry {
+    font-size: 16px;
+    padding-bottom: 25px;
+}
+
+.table {
+    background-color: #EFECE3; 
+}
+.outerTable {
+    
+    width: 25%;
+}
+.settings-text {
+    font-weight: bold;
+}
+
+.pos {
+    color: green;
+}
+
+.neg {
+    color: #FF0000;
+}
+
