@@ -27,15 +27,16 @@ The simulations are ran on the following hardcoded rules:
     - European No Hole Card (ENHC) variant - Dealer does not take an upcard, but all non-original bets are refunded in the case of a dealer blackjack. (OBO)
 
 * Counting System
-    - The simulator uses the Hi-Lo count system, where low value cards (2-6) add 1 to the count, while high value cards (10-A) subtract one from the count.
+    - The simulator uses the Hi-Lo count system, where low value cards (2-6) add one to the count, while high value cards (10-A) subtract one from the count.
     - The rough estimate, is that for every increase in the true count, the player gains about a 0.5% edge over the casino. Obviously, this trend is not linear, and this is just an estimate.
 
 * Strategy
-    - The tracked player will play perfect basic strategy, while devaiating based on the count.
+    - The tracked player will play perfect basic strategy, while deviating based on the count.
     - The exact deviations that the player uses can be found in the `./react-with-flask/api/strategies` directory.
     - All other players at the table will play perfect basic strategy.
 
 ## Other Important Notes
+
 * Anything under 10 million rounds can be incredibly inaccurate. The recommendation is to simulate as many rounds as your hardware allows in order to maximize accuracy.
 * The option to late surrender gives the player an additional 0.08% edge when used correctly. This change will inevitably improve the stats of a double deck game slightly, 
     but note that you will likely never find a casino that offers a surrender double deck game. 
