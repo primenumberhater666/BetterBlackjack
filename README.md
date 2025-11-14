@@ -17,9 +17,6 @@ With the variant available, users can compute the following data:
 `npm run dev` \
 Open another terminal and start the backend with `npm run api`
 
-
-
-
 ## Rules and Strategy
 
 The simulations are ran on the following hardcoded rules:
