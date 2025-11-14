@@ -65,7 +65,6 @@ def run(num_sims: int,
     # standard deviation
     stdev_per_round = _stdev_per_round_numpy(round_deltas)
     stdev_per_hour  = stdev_per_round * sqrt(max(rounds_per_hour, 0))
-    stdev_per_hour = np.round(stdev_per_hour, decimals = 2)
 
     if rounds_with_bet > 0:
         avg_initial_bet = (total_initial_wagered / rounds_with_bet)
@@ -74,15 +73,19 @@ def run(num_sims: int,
 
     ev_overall_pct  = _ev_percent_overall(profit, total_initial_wagered)
     ev_pr_pct       = _ev_percent_per_round(profit_per_round_val, avg_initial_bet)
-    ev_overall_pct = np.round(ev_pr_pct, decimals = 3)
-    ev_pr_pct = np.round(ev_pr_pct, decimals = 3)
 
     mu_per_round = profitPerRound(profit, num_sims)
     sigma_per_round = _stdev_per_round_numpy(round_deltas)
     risk_of_ruin = _risk_of_ruin_gaussian(starting_bankroll=float(starting_bankroll),
                                           mu_per_round=float(mu_per_round),
                                           sigma_per_round=float(sigma_per_round))
+    
     risk_of_ruin *= 100 # convert to %
+    profit_per_round_val = np.round(profit_per_hour_val, decimals = 2)
+    stdev_per_hour = np.round(stdev_per_hour, decimals = 2)
+    ev_overall_pct = np.round(ev_pr_pct, decimals = 3)
+    ev_pr_pct = np.round(ev_pr_pct, decimals = 3)
+    stdev_per_hour = np.round(stdev_per_hour, decimals = 2)
     risk_of_ruin = np.round(risk_of_ruin, decimals = 4)
 
     return {
