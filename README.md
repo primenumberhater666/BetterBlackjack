@@ -2,11 +2,19 @@
 
 BetterBlackjack is a web app designed for those who are interested in the numbers of card counting in blackjack.
 
+This simulator allows for the user to get a general idea of what their expected value (EV) looks like, based on their bet spread and table conditions. Support for other blackjack variants (i.e. S17 or dealer peek) has not yet been implemented.
+With the variant available, users can compute the following data:
+
+* Expected Value (EV) per round
+* Average Win per Round
+* Average Win per Hour
+* Standard Deviation of one hour's play 
+* Risk of Ruin (RoR) given a fixed bankroll
 
 
 
 
-## Rules
+## Rules and Strategy
 
 The simulations are ran on the following hardcoded rules:
 
@@ -22,5 +30,9 @@ The simulations are ran on the following hardcoded rules:
 
 * Strategy
     - The tracked player will play perfect basic strategy, while devaiating based on the count.
-    - The exact deviations that the player uses can be found in the ./react-with-flask/api/strategies directory.
-    - All other players at the table will play perfet basic strategy
+    - The exact deviations that the player uses can be found in the `./react-with-flask/api/strategies` directory.
+    - All other players at the table will play perfect basic strategy.
+
+* Other Important Notes
+    - The surrender gives the player an additional 0.08% edge when used correctly. This change will inevitably improve the stats of a double deck game slightly, 
+    but note that you will likely never find a casino that offers a surrender double deck game. 
