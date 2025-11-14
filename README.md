@@ -29,7 +29,7 @@ The simulations are ran on the following hardcoded rules:
     - Late Surrender is permitted in all circumstances (LS)
     - Insurance and even money permitted 
     - Split up to infinite hands (Note: The EV difference between infinite splits and 4 splits max is < 0.002%, and therefore was omitted in the design.)
-    - European No Hole Card (ENHC) variant - Dealer does not take an upcard, but all non-original bets are refunded in the case of a dealer blackjack. (OBO)
+    - European No Hole Card (ENHC) variant - Dealer does not take a hole card, but all non-original bets are refunded in the case of a dealer blackjack. (OBO)
 
 * Counting System
     - The simulator uses the Hi-Lo count system, where low value cards (2-6) add one to the count, while high value cards (10-A) subtract one from the count.
