@@ -35,7 +35,7 @@ The simulations are ran on the following hardcoded rules:
     - The exact deviations that the player uses can be found in the `./react-with-flask/api/strategies` directory.
     - All other players at the table will play perfect basic strategy.
 
-* Other Important Notes
-    - Anything under 10 million rounds can be incredibly inaccurate. The recommendation is to simulate as many rounds as your hardware allows in order to maximize accuracy.
-    - The surrender gives the player an additional 0.08% edge when used correctly. This change will inevitably improve the stats of a double deck game slightly, 
+# Other Important Notes
+    * Anything under 10 million rounds can be incredibly inaccurate. The recommendation is to simulate as many rounds as your hardware allows in order to maximize accuracy.
+    * The option to late surrender gives the player an additional 0.08% edge when used correctly. This change will inevitably improve the stats of a double deck game slightly, 
     but note that you will likely never find a casino that offers a surrender double deck game. 
