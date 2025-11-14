@@ -383,7 +383,7 @@
     },
     "conventions": {
       "actions": {
-        "D": "Double (if doubling not allowed, treat as Hit or Stand according to your engine's rules)",
+        "D": "Double",
         "H": "Hit",
         "P": "Split",
         "R": "Late surrender",
@@ -406,16 +406,6 @@
         "pair": "Pair of same rank (2-11 where 11 = Ace)",
         "soft": "Soft total (ace counted as 11)"
       },
-      "key_format": "kind:player_value|dealer_upcard",
-      "notes": [
-        "This chart assumes late surrender available against all dealer upcards.",
-        "For D actions after splitting, double is allowed (DAS).",
-        "If your game disallows doubling in some situations, you must implement the appropriate fallback logic."
-      ]
-    },
-    "metadata": {
-      "description": "Basic strategy for 4-8 decks, dealer hits soft 17, double after split allowed, late surrender allowed, no resplit aces.",
-      "game": "6D_H17_DAS_LS_noRSA",
-      "source_notes": "Derived from the multi-deck H17 DAS basic strategy table with surrender from standard references (e.g., Wikipedia), encoded with simplified actions H/S/D/P/R."
+      "key_format": "kind:player_value|dealer_upcard"
     }
   }

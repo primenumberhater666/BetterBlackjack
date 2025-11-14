@@ -28,8 +28,8 @@
         "S": "Stand",
         "D": "Double (if not allowed, fall back to Hit/Stand per your engine)",
         "P": "Split"
-      },
-      "rule_for_deviation": "If (true_count op cutoff) is true, take `action` for this key; otherwise follow basic strategy."
+      }
+     
     },
   
     "insurance": {
@@ -45,8 +45,7 @@
         "key": "hard:15|9",
         "op": ">=",
         "cutoff": 2,
-        "action": "R",
-        "comment": "At TC >= +2: surrender 15 vs 9; below that, use basic strategy (usually hit)."
+        "action": "R"
     },
     {
         "name": "15v10_Surrender_at_TC0",
@@ -54,8 +53,7 @@
         "key": "hard:15|T",
         "op": ">=",
         "cutoff": 0,
-        "action": "R",
-        "comment": "At TC >= 0: surrender 15 vs 10; below 0, follow basic strategy."
+        "action": "R"
     },
     {
         "name": "15vA_Surrender_at_TC1",
@@ -72,8 +70,7 @@
         "key": "hard:14|T",
         "op": ">=",
         "cutoff": 3,
-        "action": "R",
-        "comment": "At TC >= +3: surrender 14 vs 10; below that, follow basic strategy."
+        "action": "R"
     },
       
     {
@@ -82,8 +79,7 @@
       "key": "hard:15|9",
       "op": ">=",
       "cutoff": 2,
-      "action": "R",
-      "comment": "At TC >= +2: surrender 15 vs 9; below that, use basic strategy (usually hit)."
+      "action": "R"
     },
     {
       "name": "15v10_Surrender_at_TC0",
@@ -91,8 +87,7 @@
       "key": "hard:15|T",
       "op": ">=",
       "cutoff": 0,
-      "action": "R",
-      "comment": "At TC >= 0: surrender 15 vs 10; below 0, follow basic strategy."
+      "action": "R"
     },
     {
       "name": "15vA_Surrender_at_TC1",
@@ -100,8 +95,7 @@
       "key": "hard:15|A",
       "op": ">=",
       "cutoff": 1,
-      "action": "R",
-      "comment": "At TC >= +1: surrender 15 vs Ace; below that, use basic strategy."
+      "action": "R"
     },
     {
       "name": "14v10_Surrender_at_TC3",
@@ -109,8 +103,7 @@
       "key": "hard:14|T",
       "op": ">=",
       "cutoff": 3,
-      "action": "R",
-      "comment": "At TC >= +3: surrender 14 vs 10; below that, follow basic strategy."
+      "action": "R"
     },
 
       {
@@ -118,40 +111,35 @@
         "key": "hard:16|T",
         "op": ">=",
         "cutoff": 0,
-        "action": "S",
-        "comment": "Below 0: follow basic strategy (usually hit/surrender); at TC >= 0: stand instead of hitting."
+        "action": "S"
       },
       {
         "name": "15v10_Stand_at_TC4",
         "key": "hard:15|T",
         "op": ">=",
         "cutoff": 4,
-        "action": "S",
-        "comment": "Below +4: follow basic strategy (hit/surrender); at TC >= +4: stand."
+        "action": "S"
       },
       {
         "name": "TTv5_Split_at_TC5",
         "key": "pair:10|5",
         "op": ">=",
         "cutoff": 5,
-        "action": "P",
-        "comment": "Below +5: stand; at TC >= +5: split tens vs 5."
+        "action": "P"
       },
       {
         "name": "TTv6_Split_at_TC4",
         "key": "pair:10|6",
         "op": ">=",
         "cutoff": 4,
-        "action": "P",
-        "comment": "Below +4: stand; at TC >= +4: split tens vs 6."
+        "action": "P"
       },
       {
         "name": "10v10_Double_at_TC4",
         "key": "hard:10|T",
         "op": ">=",
         "cutoff": 4,
-        "action": "D",
-        "comment": "Below +4: hit; at TC >= +4: double 10 vs 10."
+        "action": "D"
       },
       {
         "name": "12v3_Stand_at_TC2",
@@ -166,88 +154,77 @@
         "key": "hard:12|2",
         "op": ">=",
         "cutoff": 3,
-        "action": "S",
-        "comment": "Below +3: hit; at TC >= +3: stand 12 vs 2."
+        "action": "S"
       },
       {
         "name": "11vA_Double_at_TC1",
         "key": "hard:11|A",
         "op": ">=",
         "cutoff": 1,
-        "action": "D",
-        "comment": "Below +1: hit; at TC >= +1: double 11 vs Ace."
+        "action": "D"
       },
       {
         "name": "9v2_Double_at_TC1",
         "key": "hard:9|2",
         "op": ">=",
         "cutoff": 1,
-        "action": "D",
-        "comment": "Below +1: hit; at TC >= +1: double 9 vs 2."
+        "action": "D"
       },
       {
         "name": "10vA_Double_at_TC4",
         "key": "hard:10|A",
         "op": ">=",
         "cutoff": 4,
-        "action": "D",
-        "comment": "Below +4: hit; at TC >= +4: double 10 vs Ace."
+        "action": "D"
       },
       {
         "name": "9v7_Double_at_TC3",
         "key": "hard:9|7",
         "op": ">=",
         "cutoff": 3,
-        "action": "D",
-        "comment": "Below +3: hit; at TC >= +3: double 9 vs 7."
+        "action": "D"
       },
       {
         "name": "16v9_Stand_at_TC5",
         "key": "hard:16|9",
         "op": ">=",
         "cutoff": 5,
-        "action": "S",
-        "comment": "Below +5: hit/surrender; at TC >= +5: stand 16 vs 9."
+        "action": "S"
       },
       {
         "name": "13v2_Stand_at_TCm1",
         "key": "hard:13|2",
         "op": ">=",
         "cutoff": -1,
-        "action": "S",
-        "comment": "At very low counts (< -1): hit 13 vs 2; for TC >= -1: stand."
+        "action": "S"
       },
       {
         "name": "12v4_Stand_at_TC0",
         "key": "hard:12|4",
         "op": ">=",
         "cutoff": 0,
-        "action": "S",
-        "comment": "Below 0: hit; at TC >= 0: stand 12 vs 4."
+        "action": "S"
       },
       {
         "name": "12v5_Stand_at_TCm2",
         "key": "hard:12|5",
         "op": ">=",
         "cutoff": -2,
-        "action": "S",
-        "comment": "At TC < -2: hit; for TC >= -2: stand 12 vs 5."
+        "action": "S"
       },
       {
         "name": "12v6_Stand_at_TCm1",
         "key": "hard:12|6",
         "op": ">=",
         "cutoff": -1,
-        "action": "S",
-        "comment": "At TC < -1: hit; for TC >= -1: stand 12 vs 6."
+        "action": "S"
       },
       {
         "name": "13v3_Stand_at_TCm2",
         "key": "hard:13|3",
         "op": ">=",
         "cutoff": -2,
-        "action": "S",
-        "comment": "At TC < -2: hit; for TC >= -2: stand 13 vs 3."
+        "action": "S"
       }
     ]
   }
