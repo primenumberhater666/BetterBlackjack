@@ -12,7 +12,8 @@ With the variant available, users can compute the following data:
 * Risk of Ruin (RoR) given a fixed bankroll
 
 ## Running the app
-* After running \
+Make sure you have Node.js and Flask installed.
+After running \
 `npm install` \
 `npm run dev` \
 Open another terminal and start the backend with `npm run api`
