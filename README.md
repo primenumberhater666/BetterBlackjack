@@ -33,7 +33,7 @@ The simulations are ran on the following hardcoded rules:
     - European No Hole Card (ENHC) variant - Dealer does not take a hole card, but all non-original bets are refunded in the case of a dealer blackjack. (OBO)
 
 * Counting System
-    - The simulator uses the Hi-Lo count system, where low value cards (2-6) add one to the count, while high value cards (10-A) subtract one from the count.
+    - The simulator uses the [Hi-Lo count system](https://wizardofodds.com/games/blackjack/card-counting/high-low/), where low value cards (2-6) add one to the count, while high value cards (10-A) subtract one from the count.
     - The rough estimate, is that for every increase in the true count, the player gains about a 0.5% edge over the casino. Obviously, this trend is not linear, and this is just an estimate.
 
 * Strategy
