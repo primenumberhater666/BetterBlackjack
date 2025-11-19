@@ -41,6 +41,8 @@ The simulations are ran on the following hardcoded rules:
     - The exact deviations that the player uses can be found in the `./react-with-flask/api/strategies` directory.
     - All other players at the table will play perfect basic strategy.
 
+You can add your own devations/basic strategies by modifying the .json files. 
+
 ## Other Important Notes
 
 * Anything under 10 million rounds can be incredibly inaccurate. The recommendation is to simulate as many rounds as your hardware allows in order to maximize accuracy.
