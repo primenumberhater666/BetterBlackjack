@@ -190,6 +190,7 @@ class Game:
                 continue
         return
         
+    # Play the current hand according to the strategy/deviations defined
     def play(self, hand):
         while True:
             h = self.toString(hand)
