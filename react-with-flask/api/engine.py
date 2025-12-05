@@ -60,11 +60,11 @@ def run(num_sims: int,
     # important data 
     profit = gm.roll - starting_bankroll
     profit_per_round_val = profitPerRound(profit, num_sims)
-    profit_per_hour_val  = profitPerHour(profit_per_round_val, rounds_per_hour)
+    profit_per_hour_val = profitPerHour(profit_per_round_val, rounds_per_hour)
 
     # standard deviation
     stdev_per_round = _stdev_per_round_numpy(round_deltas)
-    stdev_per_hour  = stdev_per_round * sqrt(max(rounds_per_hour, 0))
+    stdev_per_hour = stdev_per_round * sqrt(max(rounds_per_hour, 0))
 
     if rounds_with_bet > 0:
         avg_initial_bet = (total_initial_wagered / rounds_with_bet)
@@ -72,7 +72,7 @@ def run(num_sims: int,
         avg_initial_bet = 0.0
 
     ev_overall_pct  = _ev_percent_overall(profit, total_initial_wagered)
-    ev_pr_pct       = _ev_percent_per_round(profit_per_round_val, avg_initial_bet)
+    ev_pr_pct = _ev_percent_per_round(profit_per_round_val, avg_initial_bet)
 
     mu_per_round = profitPerRound(profit, num_sims)
     sigma_per_round = _stdev_per_round_numpy(round_deltas)
