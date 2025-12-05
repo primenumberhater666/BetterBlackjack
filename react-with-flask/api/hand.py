@@ -61,7 +61,7 @@ class Hand:
         
         self.value = total
 
-    # testing method, delete later!
+    # testing method
     def __str__(self):
         for c in self.hand:
             print(c)
